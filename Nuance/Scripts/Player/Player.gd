@@ -3,6 +3,7 @@ extends KinematicBody2D
 class_name Player
 
 signal is_died
+var velocity = Vector2.ZERO
 
 export (int) var gravity : int = 1000
 export (int) var speed : int =200
