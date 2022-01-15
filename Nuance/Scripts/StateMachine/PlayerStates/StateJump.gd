@@ -3,7 +3,9 @@ extends PlayerMouvement
 class_name StateJump
 
 func enter():
-	velocity.y -= owner.jump_force
+	velocity = owner.velocity
+	if velocity.y == 0:
+		velocity.y -= owner.jump_force
 
 func update(_delta):
 	velocity.x =get_horizontal_input() * owner.speed

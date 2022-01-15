@@ -4,6 +4,7 @@ class_name Playing
 
 var player_node = preload("res://Scenes/Player/Player.tscn")
 
+
 func enter():
 	owner.current_level_index = 1
 	var player = player_node.instance()
