@@ -1,12 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/World/Crossable.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 128, 120 )
 
 [node name="Crossable" type="Node2D" groups=["Crossable"]]
 script = ExtResource( 2 )
@@ -45,8 +42,3 @@ mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AreaCrossable" type="Area2D" parent="StaticPlateforme"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlateforme/AreaCrossable"]
-shape = SubResource( 2 )

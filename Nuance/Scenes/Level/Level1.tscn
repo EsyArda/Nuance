@@ -31,7 +31,9 @@ position = Vector2( 365, 456 )
 couleur_elevator = 2
 
 [node name="Crossable" parent="." instance=ExtResource( 4 )]
-position = Vector2( 503, 539 )
+position = Vector2( 672, 541 )
+scale = Vector2( 3, 0.16 )
+_scale = Vector2( 3, 0.16 )
 is_disabled = true
 
 [node name="Ground5" parent="." instance=ExtResource( 1 )]
@@ -45,12 +47,6 @@ position = Vector2( 928, 568 )
 
 [node name="Ground8" parent="." instance=ExtResource( 1 )]
 position = Vector2( 992, 568 )
-
-[node name="Ground9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 736, 568 )
-
-[node name="Ground10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 672, 568 )
 
 [node name="AreaEnd" type="Area2D" parent="."]
 position = Vector2( 1000, 496 )
