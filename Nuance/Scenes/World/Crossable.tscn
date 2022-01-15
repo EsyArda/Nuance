@@ -8,7 +8,7 @@ extents = Vector2( 32, 32 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 128, 120 )
 
-[node name="Crossable" type="Node2D"]
+[node name="Crossable" type="Node2D" groups=["Crossable"]]
 script = ExtResource( 2 )
 
 [node name="StaticPlateforme" type="StaticBody2D" parent="."]
@@ -50,5 +50,3 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlateforme/AreaCrossable"]
 shape = SubResource( 2 )
-
-[connection signal="body_entered" from="StaticPlateforme/AreaCrossable" to="." method="_on_AreaCrossable_body_entered"]
