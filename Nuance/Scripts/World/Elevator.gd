@@ -19,7 +19,7 @@ var follow=Vector2.ZERO
 func _ready():
 	set_scale(_scale)
 	if (couleur_elevator==1) :
-		$KinematicElevator/ColorElevator.color= Color(1, 1, 1, 1) #black
+		$KinematicElevator/ColorElevator.color= Color(0, 0, 0, 1) #black
 	elif (couleur_elevator==2) :
 		$KinematicElevator/ColorElevator.color= Color(1, 0, 0, 1) #red
 	elif (couleur_elevator==3) :
