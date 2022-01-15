@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/UI/UI_Opening.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screens/start_screen.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/HopeGold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fonts/font1.tres" type="DynamicFont" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
 
 [node name="UIOpening" type="Control"]
 anchor_right = 1.0
@@ -22,11 +28,30 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -19.0
-margin_top = -10.0
-margin_right = 19.0
-margin_bottom = 10.0
-text = "Play"
+margin_left = -66.0
+margin_top = -16.0
+margin_right = 66.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 1 )
+text = "Commencer"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -324.811
+margin_top = 18.8108
+margin_right = 327.189
+margin_bottom = 102.811
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Le monde a été petrifié par un terrible sortilège.
+Pour le libérer de son étreinte de pierre vous devez retrouver toutes les couleurs !"
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
