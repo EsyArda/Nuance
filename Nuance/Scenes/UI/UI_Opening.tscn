@@ -30,4 +30,5 @@ text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
