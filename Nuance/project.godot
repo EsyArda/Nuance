@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Player/Cursor.gd"
 }, {
+"base": "Node2D",
+"class": "LevelTemplate",
+"language": "GDScript",
+"path": "res://Scripts/Level/LevelTemplate.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
@@ -51,6 +56,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Cursor": "",
+"LevelTemplate": "",
 "Player": "",
 "PlayerMouvement": "",
 "State": "",

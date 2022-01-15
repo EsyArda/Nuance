@@ -1,16 +1,19 @@
-extends Node
+extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var levels : Dictionary = {"1" : preload("res://Scenes/Level/Level1.tscn")}
+var current_level_index : int = 0
+var node_level = null
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	nextLevel()
+	
+	
+func nextLevel():
+	current_level_index += 1
+	if(node_level):
+		node_level.queue_free()
+	node_level = levels[str(current_level_index)].instance()
+	add_child(node_level)
+	$Player.position = node_level.spawn_point
+	

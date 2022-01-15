@@ -12,6 +12,7 @@
 extents = Vector2( 24, 24 )
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 24, -24 )
 script = ExtResource( 2 )
 
 [node name="PlayerColor" type="ColorRect" parent="."]
@@ -49,6 +50,7 @@ script = ExtResource( 5 )
 script = ExtResource( 7 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 2.4, 2.4 )
 
 [connection signal="color_pick" from="Cursor" to="." method="_on_Cursor_color_pick"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
