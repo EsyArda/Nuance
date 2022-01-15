@@ -7,3 +7,6 @@ var node_level = null
 
 func nextLevel():
 	$StateMachine.current_state.next()
+
+func respawn():
+	get_node("Player").position = node_level.spawn_point
