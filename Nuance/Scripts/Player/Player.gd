@@ -1,9 +1,8 @@
 extends KinematicBody2D
 
-export (int) var gravity : int = 200
+export (int) var gravity : int = 1000
+export (int) var speed : int =200
+export (int) var jump_force : int = 500
 
-var velocity : Vector2 = Vector2()
-
-func _physics_process(delta):
-	velocity.y += gravity * delta
-	velocity = move_and_slide(velocity, Vector2(0, -1))
+func _on_Cursor_color_pick(color : Color):
+	$PlayerColor.color = color
