@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Level/LevelTemplate.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/World/Elevator.tscn" type="PackedScene" id=3]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 2 )
@@ -20,3 +21,6 @@ position = Vector2( 224, 568 )
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2( 64, 536 )
+
+[node name="NodeElevator" parent="." instance=ExtResource( 3 )]
+position = Vector2( 365, 456 )

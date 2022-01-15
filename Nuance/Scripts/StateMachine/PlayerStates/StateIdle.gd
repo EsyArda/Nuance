@@ -3,6 +3,7 @@ extends PlayerMouvement
 class_name StateIdle
 
 func update(_delta):
+	apply_velocity()
 	if get_horizontal_input() :
 		emit_signal("finished" , "StateMove")
 
