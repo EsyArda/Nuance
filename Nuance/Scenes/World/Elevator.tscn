@@ -17,11 +17,13 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicElevator"]
 shape = SubResource( 1 )
 
-[node name="ColorElevator" type="ColorRect" parent="KinematicElevator"]
+[node name="Color" type="ColorRect" parent="KinematicElevator"]
 margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
+mouse_filter = 2
+mouse_default_cursor_shape = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }

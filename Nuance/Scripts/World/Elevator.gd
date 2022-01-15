@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name Elevator
+
 const IDLE_DURATION=1.0
 
 #aliases
@@ -19,11 +21,11 @@ var follow=Vector2.ZERO
 func _ready():
 	set_scale(_scale)
 	if (couleur_elevator==1) :
-		$KinematicElevator/ColorElevator.color= Color(0, 0, 0, 1) #black
+		$KinematicElevator/Color.color= Color(0, 0, 0, 1) #black
 	elif (couleur_elevator==2) :
-		$KinematicElevator/ColorElevator.color= Color(1, 0, 0, 1) #red
+		$KinematicElevator/Color.color= Color(1, 0, 0, 1) #red
 	elif (couleur_elevator==3) :
-		$KinematicElevator/ColorElevator.color= Color(0, 0, 1, 1) #blue
+		$KinematicElevator/Color.color= Color(0, 0, 1, 1) #blue
 	
 	_init_tween()
 
@@ -36,3 +38,4 @@ func _init_tween():
 
 func _physics_process(_delta):
 	Elevator.position = Elevator.position.linear_interpolate(follow,0.075)
+

@@ -21,6 +21,5 @@ script = ExtResource( 6 )
 script = ExtResource( 5 )
 
 [node name="BackGround" parent="." instance=ExtResource( 1 )]
-z_index = -2
 
 [node name="GlobalUI" parent="." instance=ExtResource( 2 )]
