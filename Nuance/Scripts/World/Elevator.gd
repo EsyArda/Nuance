@@ -10,7 +10,7 @@ onready var Elevator=$KinematicElevator
 export var move_to=Vector2.UP*250 #correspond au y
 export var speed=150
 export var _scale = Vector2(2.5, 0.5) #taille de notre ascenceur
-export var couleur_elevator=1
+export var couleur_elevator=1 #couleur de la plateforme (1=noir,2=rouge,3=bleu)
 
 var follow=Vector2.ZERO
 
@@ -18,7 +18,12 @@ var follow=Vector2.ZERO
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_scale(_scale)
-
+	if (couleur_elevator==1) :
+		$KinematicElevator/ColorElevator.color= Color(0, 0, 0, 1) #black
+	elif (couleur_elevator==2) :
+		$KinematicElevator/ColorElevator.color= Color(1, 0, 0, 1) #red
+	elif (couleur_elevator==3) :
+		$KinematicElevator/ColorElevator.color= Color(0, 0, 1, 1) #blue
 	
 	_init_tween()
 

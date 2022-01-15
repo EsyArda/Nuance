@@ -9,7 +9,7 @@ func get_horizontal_input():
 	return dirx
 
 func apply_velocity():
-	velocity = owner.move_and_slide(velocity)
+	velocity = owner.move_and_slide_with_snap(velocity,Vector2(0,1),Vector2(0,-1),true)
 
 func touch_wall():
 	return owner.is_on_wall()
