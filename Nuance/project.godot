@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Cursor",
+"language": "GDScript",
+"path": "res://Scripts/Player/Cursor.gd"
+} ]
+_global_script_class_icons={
+"Cursor": ""
+}
+
 [application]
 
 config/name="Nuance"
