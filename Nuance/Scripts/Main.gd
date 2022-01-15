@@ -1,16 +1,9 @@
-extends Node
+extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+var levels : Dictionary = {"1" : preload("res://Scenes/Level/Level1.tscn")}
+var current_level_index : int = 0
+var node_level = null
+	
+func nextLevel():
+	$StateMachine.current_state.next()
