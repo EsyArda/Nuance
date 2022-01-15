@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/UI/UI_Opening.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screens/start_screen.png" type="Texture" id=2]
@@ -7,6 +7,10 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 128
 font_data = ExtResource( 3 )
 
 [node name="UIOpening" type="Control"]
@@ -42,10 +46,10 @@ __meta__ = {
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -324.811
-margin_top = 18.8108
-margin_right = 327.189
-margin_bottom = 102.811
+margin_left = -326.0
+margin_top = 150.0
+margin_right = 326.0
+margin_bottom = 234.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Le monde a été petrifié par un terrible sortilège.
@@ -57,4 +61,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -160.0
+margin_top = 30.0
+margin_right = 160.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0313726, 0, 0.0784314, 1 )
+text = "Nuance"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
