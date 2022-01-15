@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/World/Crossable.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 128, 120 )
+
+[node name="Crossable" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="StaticPlateforme" type="StaticBody2D" parent="."]
+
+[node name="CollisionPlateforme" type="CollisionShape2D" parent="StaticPlateforme"]
+shape = SubResource( 1 )
+
+[node name="Color" type="ColorRect" parent="StaticPlateforme"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = -16.0
+margin_bottom = 32.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color2" type="ColorRect" parent="StaticPlateforme"]
+margin_left = -8.0
+margin_top = -32.0
+margin_right = 8.0
+margin_bottom = 32.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color3" type="ColorRect" parent="StaticPlateforme"]
+margin_left = 16.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaCrossable" type="Area2D" parent="StaticPlateforme"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlateforme/AreaCrossable"]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="StaticPlateforme/AreaCrossable" to="." method="_on_AreaCrossable_body_entered"]
