@@ -1,0 +1,163 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/World/Crossable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/World/Elevator.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=3]
+
+[node name="Level4" type="Node2D"]
+
+[node name="Ground2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, 568 )
+
+[node name="Ground" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 568 )
+
+[node name="Ground4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 736, 568 )
+
+[node name="Ground7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 800, 568 )
+
+[node name="Ground8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 864, 568 )
+
+[node name="Ground9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 928, 568 )
+
+[node name="Ground10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 992, 568 )
+
+[node name="Crossable2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 304, 539 )
+scale = Vector2( 2.5, 0.15 )
+is_disabled = true
+
+[node name="Crossable" parent="." instance=ExtResource( 1 )]
+position = Vector2( 144, 539 )
+scale = Vector2( 2.5, 0.15 )
+is_disabled = true
+
+[node name="Crossable3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 616, 291 )
+scale = Vector2( 2.5, 0.15 )
+couleur_crossable = 2
+
+[node name="Crossable4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56, 72 )
+scale = Vector2( 0.15, 1.8 )
+_scale = Vector2( 0.15, 1.8 )
+couleur_crossable = 2
+
+[node name="NodeElevator" parent="." instance=ExtResource( 2 )]
+position = Vector2( 240, 504 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 1, 1 )
+couleur_elevator = 2
+
+[node name="NodeElevator2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 944, 504 )
+scale = Vector2( 2.5, 0.5 )
+
+[node name="NodeElevator3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 776, 320 )
+scale = Vector2( 2.5, 1 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 2.5, 1 )
+couleur_elevator = 2
+
+[node name="NodeElevator4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 456, 320 )
+scale = Vector2( 2.5, 1 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 2.5, 1 )
+
+[node name="NodeElevator5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 344, 256 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 1, 1 )
+
+[node name="NodeElevator6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 344, 120 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 0.5, 1 )
+couleur_elevator = 2
+
+[node name="NodeElevator7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 168, 256 )
+scale = Vector2( 0.5, 1 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 0.5, 1 )
+couleur_elevator = 2
+
+[node name="NodeElevator8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 136, 192 )
+scale = Vector2( 0.5, 1 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 0.5, 1 )
+
+[node name="NodeElevator9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 88, 144 )
+scale = Vector2( 1, 0.5 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 1, 0.5 )
+couleur_elevator = 2
+
+[node name="Ground5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 24, 224 )
+
+[node name="Ground3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 24, 160 )
+
+[node name="Ground6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 24, 286 )
+
+[node name="Ground12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 24, 344 )
+
+[node name="Ground11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 88, -16 )
+
+[node name="Ground15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 152, -16 )
+
+[node name="Ground16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 216, -16 )
+
+[node name="Ground17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 280, -16 )
+
+[node name="Ground19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 344, -16 )
+
+[node name="Ground18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 408, -16 )
+
+[node name="Ground20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 472, -16 )
+
+[node name="Ground21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 536, -16 )
+
+[node name="Ground22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 600, -16 )
+
+[node name="Ground23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 664, -16 )
+
+[node name="Ground24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 728, -16 )
+
+[node name="Ground26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 792, -16 )
+
+[node name="Ground25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 856, -16 )
+
+[node name="Ground27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 920, -16 )
+
+[node name="Ground28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 984, -16 )
+
+[node name="Ground13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1048, -16 )
