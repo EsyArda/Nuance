@@ -48,7 +48,6 @@ func _physics_process(delta):
 	current_state.update(delta)
 
 func _change_state(state_name):
-	var velocity = Vector2.ZERO
 	if not _active:
 		return
 	current_state.exit()

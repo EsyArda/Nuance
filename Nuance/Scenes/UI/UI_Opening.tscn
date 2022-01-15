@@ -15,10 +15,12 @@ __meta__ = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
+visible = false
 texture = ExtResource( 2 )
 offset = Vector2( 512, 300 )
 
 [node name="Button" type="Button" parent="CanvasLayer"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

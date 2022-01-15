@@ -23,7 +23,6 @@ func _ready():
 		$StaticPlateforme/Color3.color= Color(0, 0, 1, 1) #blue
 
 func _on_AreaCrossable_body_entered(body):
-	print(body)
 	if body is Player and body.get_node("PlayerColor").color==$StaticPlateforme/Color.color:
 		cs.set_deferred("disabled",true)
 	if body is Player and body.get_node("PlayerColor").color!=$StaticPlateforme/Color.color:
