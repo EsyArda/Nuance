@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Level/LevelTemplate.gd" type="Script" id=2]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Ground" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 568 )
+
+[node name="Ground2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 568 )
+
+[node name="Ground3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 568 )
+
+[node name="Ground4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 568 )
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2( 64, 536 )
