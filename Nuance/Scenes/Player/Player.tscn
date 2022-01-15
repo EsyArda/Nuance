@@ -48,4 +48,7 @@ script = ExtResource( 5 )
 [node name="StateJump" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
 [connection signal="color_pick" from="Cursor" to="." method="_on_Cursor_color_pick"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
