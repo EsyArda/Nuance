@@ -1,16 +1,30 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/World/Crossable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Level/LevelTemplate.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/World/Elevator.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/World/end_level.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/World/Green_tree2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/World/Green_tree.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Environement/arch.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Environement/broken_arch_piece.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Environement/broken_column.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Environement/tree.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
 [node name="Level7" type="Node2D"]
 script = ExtResource( 3 )
+
+[node name="tree1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 634, 335 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="tree2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 74, 342 )
+scale = Vector2( 0.2, 0.2 )
 
 [node name="NodeElevator6" parent="." instance=ExtResource( 4 )]
 position = Vector2( -72, 248 )
@@ -153,4 +167,28 @@ shape = SubResource( 1 )
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 5 )
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 647, 438 )
+scale = Vector2( 0.18, 0.2 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 348, 157 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 128, 476 )
+rotation = 1.53589
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 10 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 990, 195 )
+scale = Vector2( -0.2, 0.2 )
+texture = ExtResource( 11 )
 [connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]
