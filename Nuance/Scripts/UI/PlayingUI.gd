@@ -3,7 +3,7 @@ extends Control
 class_name PlayingUI
 
 var time_start
-
+var time_total
 
 func change_level(num:int):
 	$Level/Num.text = str(num)
@@ -15,3 +15,6 @@ func _process(_delta):
 	if time_start:
 		var v = (OS.get_ticks_msec() - time_start)/1000
 		$Time/Num.text = str(v/60) + "m " + str(v%60) + "s"
+
+func end_chrono():
+	time_total = OS.get_ticks_msec() - time_start
