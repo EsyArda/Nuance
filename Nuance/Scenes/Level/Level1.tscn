@@ -24,7 +24,7 @@ position = Vector2( 160, 568 )
 position = Vector2( 224, 568 )
 
 [node name="SpawnPoint" type="Node2D" parent="."]
-position = Vector2( 64, 536 )
+position = Vector2( 32, 488 )
 
 [node name="NodeElevator" parent="." instance=ExtResource( 3 )]
 position = Vector2( 365, 456 )

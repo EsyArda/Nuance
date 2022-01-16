@@ -9,6 +9,7 @@ extents = Vector2( 17, 44.5 )
 
 [node name="Level0" type="Node2D"]
 script = ExtResource( 2 )
+reset_when_died = true
 
 [node name="Ground" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 568 )
@@ -31,4 +32,5 @@ position = Vector2( 1000, 496 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEnd"]
 position = Vector2( 8, -3.5 )
 shape = SubResource( 1 )
+
 [connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]
