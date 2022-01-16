@@ -102,6 +102,10 @@ config/name="Nuance"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+MusicManager="*res://Scripts/MusicManager.gd"
+
 [display]
 
 mouse_cursor/custom_image="res://Assets/UI/cursor_small.png"
