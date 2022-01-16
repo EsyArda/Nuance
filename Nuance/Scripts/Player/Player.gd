@@ -6,7 +6,7 @@ signal is_died
 var velocity = Vector2.ZERO
 
 export (int) var gravity : int = 1000
-export (int) var speed : int =200
+export (int) var speed : int =150
 export (float) var jump_force : float = 500
 export (float) var blue_power : float = 0.2
 export (float) var green_power : float = 1.5
