@@ -1,0 +1,181 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/World/Crossable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/World/Elevator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Level/LevelTemplate.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 34.125, 31.25 )
+
+[node name="Level3" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Ground2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 672, 568 )
+
+[node name="Ground" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 568 )
+scale = Vector2( 2, 1 )
+_scale = Vector2( 2, 1 )
+
+[node name="Ground4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 736, 568 )
+
+[node name="Ground7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 800, 568 )
+
+[node name="Ground8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 864, 568 )
+
+[node name="Ground9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 928, 568 )
+
+[node name="Ground10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 992, 568 )
+
+[node name="Crossable2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 368, 541 )
+scale = Vector2( 2.5, 0.15 )
+is_disabled = true
+
+[node name="Crossable" parent="." instance=ExtResource( 1 )]
+position = Vector2( 208, 541 )
+scale = Vector2( 2.5, 0.15 )
+is_disabled = true
+
+[node name="Crossable3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 616, 296 )
+scale = Vector2( 2.5, 0.15 )
+couleur_crossable = 2
+
+[node name="Crossable4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56, 72 )
+scale = Vector2( 0.15, 1.8 )
+_scale = Vector2( 0.15, 1.8 )
+couleur_crossable = 2
+
+[node name="NodeElevator" parent="." instance=ExtResource( 3 )]
+position = Vector2( 240, 504 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 1, 1 )
+couleur_elevator = 2
+
+[node name="NodeElevator2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 944, 504 )
+scale = Vector2( 2.5, 0.5 )
+
+[node name="NodeElevator3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 776, 320 )
+scale = Vector2( 2.5, 0.9 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 2.5, 0.9 )
+couleur_elevator = 2
+
+[node name="NodeElevator4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 456, 320 )
+scale = Vector2( 2.5, 0.9 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 2.5, 0.9 )
+
+[node name="NodeElevator5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 344, 256 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 1, 1 )
+
+[node name="NodeElevator6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 344, 120 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 0.5, 1 )
+couleur_elevator = 2
+
+[node name="NodeElevator7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 168, 256 )
+scale = Vector2( 0.5, 1 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 0.5, 1 )
+couleur_elevator = 2
+
+[node name="NodeElevator8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 136, 192 )
+scale = Vector2( 0.5, 1 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 0.5, 1 )
+
+[node name="NodeElevator9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 88, 144 )
+scale = Vector2( 1, 0.5 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 1, 0.5 )
+couleur_elevator = 2
+
+[node name="Ground5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, 224 )
+
+[node name="Ground3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, 160 )
+
+[node name="Ground6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, 286 )
+
+[node name="Ground12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, 344 )
+
+[node name="Ground11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 88, -16 )
+
+[node name="Ground15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 152, -16 )
+
+[node name="Ground16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 216, -16 )
+
+[node name="Ground17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 280, -16 )
+
+[node name="Ground19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 344, -16 )
+
+[node name="Ground18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 408, -16 )
+
+[node name="Ground20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 472, -16 )
+
+[node name="Ground21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 536, -16 )
+
+[node name="Ground22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 600, -16 )
+
+[node name="Ground23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 664, -16 )
+
+[node name="Ground24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 728, -16 )
+
+[node name="Ground26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 792, -16 )
+
+[node name="Ground25" parent="." instance=ExtResource( 2 )]
+position = Vector2( 856, -16 )
+
+[node name="Ground27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 920, -16 )
+
+[node name="Ground28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 984, -16 )
+
+[node name="Ground13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1048, -16 )
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2( 32, 534 )
+
+[node name="AreaEnd" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEnd"]
+position = Vector2( 21.875, -16 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]
