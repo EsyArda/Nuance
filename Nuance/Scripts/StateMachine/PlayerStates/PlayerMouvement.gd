@@ -14,10 +14,15 @@ func apply_velocity():
 	for i in owner.get_slide_count():
 		col = owner.get_slide_collision(i).collider
 		if col.owner is Elevator:
-			print(owner.get_children())
 			if col.owner.color == owner.get_node("PlayerColor").color:
 				owner.died()
+	set_flip(velocity)
 
 func touch_wall():
 	return owner.is_on_wall()
 
+func set_flip(vel : Vector2):
+	if vel.x > 0:
+		owner.get_node("Face").set_flip_h(true)
+	elif vel.x <0:
+		owner.get_node("Face").set_flip_h(false)
