@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/World/Crossable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/World/Elevator.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Level/LevelTemplate.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 34.125, 31.25 )
 
 [node name="Level4" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Ground2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 672, 568 )
@@ -161,3 +166,14 @@ position = Vector2( 984, -16 )
 
 [node name="Ground13" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1048, -16 )
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2( 32, 534 )
+
+[node name="AreaEnd" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEnd"]
+position = Vector2( 21.875, -16 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]

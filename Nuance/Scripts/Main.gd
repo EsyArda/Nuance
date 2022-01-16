@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var levels : Array = [preload("res://Scenes/Level/Level0.tscn"), preload("res://Scenes/Level/Level1.tscn")]
+var levels : Array = [preload("res://Scenes/Level/Level0.tscn"), preload("res://Scenes/Level/Level1.tscn"), preload("res://Scenes/Level/Level4.tscn")]
 var current_level_index : int = -1
 var node_level = null
 
