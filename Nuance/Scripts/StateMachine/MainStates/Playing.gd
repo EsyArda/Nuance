@@ -26,7 +26,6 @@ func load_level():
 	owner.node_level = owner.levels[owner.current_level_index].instance()
 	owner.node_level.connect("finish",owner,"nextLevel")
 	owner.call_deferred("add_child",owner.node_level)
-	owner.get_node("GlobalUI/PlayingUI").time_start = OS.get_ticks_msec()
 	
 func exit():
 	owner.get_node("Player").queue_free()
