@@ -1,0 +1,133 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Level/LevelTemplate.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/World/Elevator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/World/Crossable.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.5, 34.25 )
+
+[node name="Level4" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Ground" parent="." instance=ExtResource( 1 )]
+position = Vector2( 992, 568 )
+
+[node name="Ground2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 992, 288 )
+scale = Vector2( 1, 5 )
+_scale = Vector2( 1, 5 )
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2( 992, 536 )
+
+[node name="NodeElevator" parent="." instance=ExtResource( 3 )]
+position = Vector2( 800, 568 )
+scale = Vector2( 5, 1 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 5, 1 )
+
+[node name="NodeElevator3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 896, 504 )
+scale = Vector2( 2, 0.5 )
+move_to = Vector2( 0, -600 )
+_scale = Vector2( 2, 0.5 )
+couleur_elevator = 2
+
+[node name="NodeElevator5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 736, 360 )
+scale = Vector2( 3, 5 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 3, 5 )
+couleur_elevator = 2
+
+[node name="Crossable3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 544, 540 )
+scale = Vector2( 3, 0.1 )
+_scale = Vector2( 3, 0.1 )
+is_disabled = true
+
+[node name="Crossable4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 643, 528 )
+scale = Vector2( 0.1, 0.3 )
+_scale = Vector2( 0.1, 0.3 )
+couleur_crossable = 2
+
+[node name="Ground6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 511, 19 )
+scale = Vector2( 14, 1 )
+_scale = Vector2( 14, 1 )
+
+[node name="Ground10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 280 )
+scale = Vector2( 1, 10 )
+_scale = Vector2( 1, 10 )
+
+[node name="NodeElevator2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 736, 144 )
+scale = Vector2( 7, 0.5 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 7, 0.5 )
+
+[node name="Crossable" parent="." instance=ExtResource( 4 )]
+position = Vector2( 352, 540 )
+scale = Vector2( 3, 0.1 )
+_scale = Vector2( 3, 0.1 )
+is_disabled = true
+
+[node name="NodeElevator4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, 320 )
+scale = Vector2( 2, 0.5 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 2, 0.5 )
+couleur_elevator = 3
+
+[node name="NodeElevator6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 160, 553 )
+scale = Vector2( 3, 0.5 )
+move_to = Vector2( 0, -880 )
+_scale = Vector2( 3, 0.5 )
+couleur_elevator = 2
+
+[node name="Crossable2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 320, 112 )
+scale = Vector2( 2, 0.1 )
+_scale = Vector2( 2, 0.1 )
+is_disabled = true
+
+[node name="Crossable5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 485, 160 )
+scale = Vector2( 0.8, 0.1 )
+_scale = Vector2( 0.8, 0.1 )
+couleur_crossable = 3
+
+[node name="Crossable6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 393, 160 )
+scale = Vector2( 2, 0.1 )
+_scale = Vector2( 2, 0.1 )
+is_disabled = true
+
+[node name="Ground3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 416, 94 )
+scale = Vector2( 1, 1.5 )
+_scale = Vector2( 1, 1.5 )
+
+[node name="Ground4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1056, 80 )
+scale = Vector2( 1, 3 )
+_scale = Vector2( 1, 3 )
+
+[node name="Ground5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 259, 179 )
+scale = Vector2( 0.1, 2 )
+_scale = Vector2( 0.1, 2 )
+
+[node name="AreaEnd" type="Area2D" parent="."]
+position = Vector2( 992, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEnd"]
+position = Vector2( 0, -10 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]
