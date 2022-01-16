@@ -7,8 +7,9 @@ var velocity = Vector2.ZERO
 
 export (int) var gravity : int = 1000
 export (int) var speed : int =200
-export (int) var jump_force : int = 500
+export (float) var jump_force : float = 500
 export (float) var blue_power : float = 0.2
+export (float) var green_power : float = 1.5
 
 func _on_Cursor_color_pick(color : Color):
 	exit_color()
@@ -37,7 +38,11 @@ func reset_color():
 func exit_color():
 	if $PlayerColor.color == Color(0,0,1,1):
 		scale = scale / blue_power
+	if $PlayerColor.color == Color(0,1,0,1):
+		jump_force = jump_force / green_power
 
 func enter_color():
 	if $PlayerColor.color == Color(0,0,1,1):
 		scale = blue_power * scale
+	if $PlayerColor.color == Color(0,1,0,1):
+		jump_force = jump_force * green_power
