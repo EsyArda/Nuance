@@ -41,7 +41,7 @@ _scale = Vector2( 0.5, 1 )
 [node name="NodeElevator3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 256, 496 )
 scale = Vector2( 2, 0.5 )
-move_to = Vector2( 0, -600 )
+move_to = Vector2( 0, -700 )
 _scale = Vector2( 2, 0.5 )
 couleur_elevator = 2
 
