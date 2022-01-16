@@ -81,4 +81,5 @@ texture = ExtResource( 8 )
 position = Vector2( 1010, 400 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
+
 [connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]

@@ -16,5 +16,5 @@ func _ready():
 
 func _on_AreaEnd_body_entered(body):
 	if body is Player:
-		if $AreaEnd.position.distance_to(body.position)<50:
+		if $AreaEnd.position.distance_to(body.position)<300:
 			emit_signal("finish")
