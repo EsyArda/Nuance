@@ -23,3 +23,7 @@ func _ready():
 		$StaticPlateforme/Color.color= Color(0, 0, 1, 1) #blue
 		$StaticPlateforme/Color2.color= Color(0, 0, 1, 1) #blue
 		$StaticPlateforme/Color3.color= Color(0, 0, 1, 1) #blue
+	elif (couleur_crossable==4) :
+		$StaticPlateforme/Color.color= Color(0, 1, 0, 1) #green
+		$StaticPlateforme/Color2.color= Color(0, 1, 0, 1) #green
+		$StaticPlateforme/Color3.color= Color(0, 1, 0, 1) #green

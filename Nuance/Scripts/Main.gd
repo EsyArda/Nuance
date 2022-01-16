@@ -1,14 +1,22 @@
 extends Node2D
 
 
-var levels : Array = [preload("res://Scenes/Level/Level0.tscn"), preload("res://Scenes/Level/Level1.tscn"), preload("res://Scenes/Level/Level2.tscn"),preload("res://Scenes/Level/Level3.tscn"), preload("res://Scenes/Level/Level4.tscn"),preload("res://Scenes/Level/Level5.tscn"),preload("res://Scenes/Level/Level6.tscn")]
+var levels : Array = [preload("res://Scenes/Level/Level0.tscn"),
+					  preload("res://Scenes/Level/Level1.tscn"),
+					  preload("res://Scenes/Level/Level2.tscn"),
+					  preload("res://Scenes/Level/Level3.tscn"),
+					  preload("res://Scenes/Level/Level4.tscn"),
+					  preload("res://Scenes/Level/Level5.tscn"),
+					  preload("res://Scenes/Level/Level6.tscn"),
+					  preload("res://Scenes/Level/Level7.tscn")]
+					
 var current_level_index : int = -1
 var node_level = null
 
 export (int) var cursor_speed : int  = 6
 
 func _ready():
-	$GlobalUI/PlayingUI.change_level(0)
+	$GlobalUI/PlayingUI.change_level(current_level_index+1)
 
 func nextLevel():
 	$StateMachine.current_state.next()
