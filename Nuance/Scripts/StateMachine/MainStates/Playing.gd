@@ -6,7 +6,7 @@ var player_node = preload("res://Scenes/Player/Player.tscn")
 var player
 
 func enter():
-	owner.current_level_index = 0
+	owner.current_level_index +=1
 	player = player_node.instance()
 	owner.call_deferred("add_child",player)
 	player.connect("is_died",owner,"respawn")
