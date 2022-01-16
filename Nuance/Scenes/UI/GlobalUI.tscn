@@ -17,5 +17,4 @@ __meta__ = {
 [node name="UIOpening" parent="." instance=ExtResource( 1 )]
 
 [node name="UIEnding" parent="." instance=ExtResource( 3 )]
-
 [connection signal="run_game" from="UIOpening" to="." method="_on_UIOpening_run_game"]
