@@ -20,10 +20,10 @@ _scale = Vector2( 20, 1 )
 position = Vector2( 67.8265, 416.611 )
 
 [node name="NodeElevator" parent="." instance=ExtResource( 3 )]
-position = Vector2( -644.987, 308.767 )
+position = Vector2( -1000, 300 )
 scale = Vector2( 20, 12 )
 move_to = Vector2( 3000, 0 )
-speed = 11
+speed = 13
 _scale = Vector2( 20, 12 )
 
 [node name="AreaEnd" type="Area2D" parent="."]
@@ -32,5 +32,4 @@ position = Vector2( 1000, 496 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEnd"]
 position = Vector2( 8, -3.5 )
 shape = SubResource( 1 )
-
 [connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]

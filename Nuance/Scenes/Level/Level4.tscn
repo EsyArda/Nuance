@@ -15,7 +15,9 @@ script = ExtResource( 4 )
 position = Vector2( 672, 568 )
 
 [node name="Ground" parent="." instance=ExtResource( 3 )]
-position = Vector2( 32, 568 )
+position = Vector2( 64, 568 )
+scale = Vector2( 2, 1 )
+_scale = Vector2( 2, 1 )
 
 [node name="Ground4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 736, 568 )
@@ -33,17 +35,17 @@ position = Vector2( 928, 568 )
 position = Vector2( 992, 568 )
 
 [node name="Crossable2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 304, 539 )
+position = Vector2( 368, 541 )
 scale = Vector2( 2.5, 0.15 )
 is_disabled = true
 
 [node name="Crossable" parent="." instance=ExtResource( 1 )]
-position = Vector2( 144, 539 )
+position = Vector2( 208, 541 )
 scale = Vector2( 2.5, 0.15 )
 is_disabled = true
 
 [node name="Crossable3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 616, 291 )
+position = Vector2( 616, 296 )
 scale = Vector2( 2.5, 0.15 )
 couleur_crossable = 2
 
@@ -65,16 +67,16 @@ scale = Vector2( 2.5, 0.5 )
 
 [node name="NodeElevator3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 776, 320 )
-scale = Vector2( 2.5, 1 )
+scale = Vector2( 2.5, 0.9 )
 move_to = Vector2( 0, 0 )
-_scale = Vector2( 2.5, 1 )
+_scale = Vector2( 2.5, 0.9 )
 couleur_elevator = 2
 
 [node name="NodeElevator4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 456, 320 )
-scale = Vector2( 2.5, 1 )
+scale = Vector2( 2.5, 0.9 )
 move_to = Vector2( 0, 0 )
-_scale = Vector2( 2.5, 1 )
+_scale = Vector2( 2.5, 0.9 )
 
 [node name="NodeElevator5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 344, 256 )
