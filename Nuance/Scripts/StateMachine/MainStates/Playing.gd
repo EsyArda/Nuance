@@ -3,11 +3,11 @@ extends State
 class_name Playing
 
 var player_node = preload("res://Scenes/Player/Player.tscn")
-
+var player
 
 func enter():
 	owner.current_level_index = 0
-	var player = player_node.instance()
+	player = player_node.instance()
 	owner.call_deferred("add_child",player)
 	player.connect("is_died",owner,"respawn")
 	load_level()
@@ -20,7 +20,8 @@ func next():
 		emit_signal("finished","Ending")
 
 func load_level():
-	print(owner.levels)
+	if owner.node_level:
+		owner.node_level.queue_free()
 	owner.node_level = owner.levels[owner.current_level_index].instance()
 	owner.node_level.connect("finish",owner,"nextLevel")
 	owner.call_deferred("add_child",owner.node_level)

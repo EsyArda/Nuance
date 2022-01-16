@@ -12,6 +12,13 @@ func respawn():
 	var player = get_node("Player")
 	if player:
 		player.position = node_level.spawn_point
+	if node_level && node_level.reset_when_died:
+		reload_lvl()
 
 func set_spawn_point(pos):
-	$Player.position = pos
+	if $Player:
+		$Player.position = pos
+		$Player.reset_color()
+
+func reload_lvl():
+	$StateMachine.current_state.load_level()
