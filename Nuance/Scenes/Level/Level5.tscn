@@ -1,0 +1,134 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Level/LevelTemplate.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/World/Elevator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/World/Crossable.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.5, 34.25 )
+
+[node name="Level4" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Ground" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 568 )
+
+[node name="Ground2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 31, 224 )
+scale = Vector2( 1, 7 )
+_scale = Vector2( 1, 7 )
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2( 31, 535 )
+
+[node name="NodeElevator" parent="." instance=ExtResource( 3 )]
+position = Vector2( 384, 568 )
+scale = Vector2( 10, 1 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 10, 1 )
+
+[node name="Crossable" parent="." instance=ExtResource( 4 )]
+position = Vector2( 600, 328 )
+scale = Vector2( 3, 0.1 )
+_scale = Vector2( 3, 0.1 )
+
+[node name="Ground8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1008, 568 )
+scale = Vector2( 0.5, 1 )
+_scale = Vector2( 0.5, 1 )
+
+[node name="NodeElevator3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 256, 496 )
+scale = Vector2( 2, 0.5 )
+move_to = Vector2( 0, -700 )
+_scale = Vector2( 2, 0.5 )
+couleur_elevator = 2
+
+[node name="Crossable2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 576, 400 )
+scale = Vector2( 2, 0.1 )
+_scale = Vector2( 2, 0.1 )
+couleur_crossable = 2
+is_disabled = true
+
+[node name="NodeElevator5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 416, 464 )
+scale = Vector2( 3, 1.5 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 3, 1.5 )
+couleur_elevator = 2
+
+[node name="Crossable3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 64, 492 )
+scale = Vector2( 0.1, 1.4 )
+_scale = Vector2( 0.1, 1.4 )
+is_disabled = true
+
+[node name="Crossable4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 544, 472 )
+scale = Vector2( 1, 0.1 )
+_scale = Vector2( 1, 0.1 )
+
+[node name="Ground3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 416, 320 )
+scale = Vector2( 3, 3 )
+_scale = Vector2( 3, 3 )
+
+[node name="Ground4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, 192 )
+scale = Vector2( 2, 1 )
+_scale = Vector2( 2, 1 )
+
+[node name="Ground5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 352, 128 )
+
+[node name="Ground6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, -24 )
+scale = Vector2( 14, 1 )
+_scale = Vector2( 14, 1 )
+
+[node name="Crossable5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 320, 52 )
+scale = Vector2( 0.1, 1.4 )
+_scale = Vector2( 0.1, 1.4 )
+is_disabled = true
+
+[node name="Crossable6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 323, 52 )
+scale = Vector2( 0.1, 1.4 )
+_scale = Vector2( 0.1, 1.4 )
+couleur_crossable = 2
+
+[node name="Crossable7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 928, 128 )
+scale = Vector2( 3, 0.15 )
+_scale = Vector2( 3, 0.15 )
+couleur_crossable = 2
+
+[node name="Ground7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 928, 40 )
+
+[node name="Ground9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640, 56 )
+scale = Vector2( 6, 0.5 )
+_scale = Vector2( 6, 0.5 )
+
+[node name="Crossable8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 864, 69 )
+scale = Vector2( 1, 0.1 )
+_scale = Vector2( 1, 0.1 )
+is_disabled = true
+
+[node name="Ground10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1056, 280 )
+scale = Vector2( 1, 10 )
+_scale = Vector2( 1, 10 )
+
+[node name="AreaEnd" type="Area2D" parent="."]
+position = Vector2( 992, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEnd"]
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]
