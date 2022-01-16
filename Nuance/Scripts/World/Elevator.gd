@@ -30,7 +30,6 @@ func _ready():
 		$KinematicElevator/Color.color= Color(0, 0, 1, 1) #blue
 		color = Color(0, 0, 1, 1)
 	elif (couleur_elevator==4) :
-		print("?")
 		$KinematicElevator/Color.color= Color(0, 1, 0, 1) #green
 		color = Color(0, 1, 0, 1)
 	
@@ -45,4 +44,3 @@ func _init_tween():
 
 func _physics_process(_delta):
 	Elevator.position = Elevator.position.linear_interpolate(follow,0.075)
-

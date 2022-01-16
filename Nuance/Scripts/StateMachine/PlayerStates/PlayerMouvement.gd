@@ -9,13 +9,14 @@ func get_horizontal_input():
 	return dirx
 
 func apply_velocity():
-	velocity = owner.move_and_slide_with_snap(velocity,Vector2(0,1),Vector2(0,-1),true)
+	var _tmp = owner.move_and_slide(Vector2.ZERO)
 	var col
 	for i in owner.get_slide_count():
 		col = owner.get_slide_collision(i).collider
 		if col.owner is Elevator:
 			if col.owner.color == owner.get_node("PlayerColor").color:
 				owner.died()
+	velocity = owner.move_and_slide_with_snap(velocity,Vector2(0,1),Vector2(0,-1),true)
 	set_flip(velocity)
 
 func touch_wall():
