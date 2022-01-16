@@ -9,3 +9,5 @@ func enter():
 	if music_theme:
 		MusicManager.play_music(music_theme)
 	
+func next():
+	pass

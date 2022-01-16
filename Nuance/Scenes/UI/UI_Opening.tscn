@@ -59,8 +59,8 @@ margin_left = -326.0
 margin_top = 150.0
 margin_right = 326.0
 margin_bottom = 234.0
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
 text = "Le monde a été petrifié par un terrible sortilège.
 Pour le libérer de son étreinte de pierre vous devez retrouver toutes les couleurs !"
 align = 1
@@ -77,12 +77,13 @@ margin_left = -160.0
 margin_top = 30.0
 margin_right = 160.0
 margin_bottom = 132.0
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.0313726, 0, 0.0784314, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "Nuance"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]

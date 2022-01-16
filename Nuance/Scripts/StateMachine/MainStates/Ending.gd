@@ -15,3 +15,6 @@ func enter():
 	
 func exit():
 	owner.get_node("GlobalUI").hide_Ending()
+
+func next():
+	pass

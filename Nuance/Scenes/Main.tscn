@@ -31,6 +31,5 @@ music_theme = ExtResource( 9 )
 visible = false
 
 [node name="GlobalUI" parent="." instance=ExtResource( 2 )]
-visible = false
 
 [node name="MusicManageur" parent="." instance=ExtResource( 8 )]

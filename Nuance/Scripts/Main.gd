@@ -7,11 +7,16 @@ var node_level = null
 
 export (int) var cursor_speed : int  = 6
 
+func _ready():
+	$GlobalUI/PlayingUI.change_level(0)
+
 func nextLevel():
 	$StateMachine.current_state.next()
+	$GlobalUI/PlayingUI.change_level(current_level_index)
 
 func respawn():
 	var player = get_node("Player")
+	$GlobalUI/PlayingUI.increase_death_cmpt()
 	if node_level && node_level.reset_when_died:
 		reload_lvl()
 	elif player:

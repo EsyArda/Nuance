@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/UI/PlayingUI.gd" type="Script" id=1]
+
+[node name="PlayingUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1024, 600 )
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level" type="Control" parent="."]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level"]
+margin_right = 42.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Num" type="Label" parent="Level"]
+margin_left = 42.6667
+margin_right = 82.6667
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NbDeath" type="Control" parent="."]
+margin_left = 40.0
+margin_top = 72.0
+margin_right = 80.0
+margin_bottom = 112.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Label" type="Label" parent="NbDeath"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nb morts :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Num" type="Label" parent="NbDeath"]
+margin_left = 72.0
+margin_right = 112.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Control" parent="."]
+margin_left = 768.0
+margin_top = 40.0
+margin_right = 808.0
+margin_bottom = 80.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Time"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Temps :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Num" type="Label" parent="Time"]
+margin_left = 56.0
+margin_right = 96.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
