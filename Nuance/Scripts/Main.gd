@@ -11,7 +11,7 @@ var levels : Array = [preload("res://Scenes/Level/Level0.tscn"),
 					  preload("res://Scenes/Level/Level7.tscn"),
 					  preload("res://Scenes/Level/Level8.tscn")]
 					
-var current_level_index : int = 7
+var current_level_index : int = -1
 var node_level = null
 
 export (int) var cursor_speed : int  = 6
