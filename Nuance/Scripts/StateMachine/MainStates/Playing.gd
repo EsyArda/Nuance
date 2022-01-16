@@ -26,11 +26,12 @@ func load_level():
 	owner.node_level = owner.levels[owner.current_level_index].instance()
 	owner.node_level.connect("finish",owner,"nextLevel")
 	owner.call_deferred("add_child",owner.node_level)
-	owner.get_node("GlobalUI/PlayingUI").end_chrono()
+	owner.get_node("GlobalUI/PlayingUI").time_start = OS.get_ticks_msec()
 	
 func exit():
 	owner.get_node("Player").queue_free()
 	owner.node_level.queue_free()
+	owner.get_node("GlobalUI/PlayingUI").end_chrono()
 
 func handle_input(event : InputEvent):
 	if event.is_action_pressed("UI_Display"):
