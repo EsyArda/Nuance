@@ -1,21 +1,31 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Environement/sky.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Environement/mountains.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environement/near_mountains.png" type="Texture" id=3]
 
 [node name="BackGround" type="Node2D"]
 z_index = -2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
-mouse_filter = 2
-color = Color( 0.894118, 0.894118, 0.894118, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Control" type="Control" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
-mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/sky"]
+texture = ExtResource( 1 )
+offset = Vector2( 0, 300 )
+
+[node name="far mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/far mountains"]
+position = Vector2( 0, 300 )
+texture = ExtResource( 2 )
+
+[node name="near moutains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/near moutains"]
+position = Vector2( 0, 300 )
+texture = ExtResource( 3 )
