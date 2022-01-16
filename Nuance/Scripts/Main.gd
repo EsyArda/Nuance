@@ -37,3 +37,7 @@ func _physics_process(_delta):
 		vect_tmp.x = cursor_speed
 	if vect_tmp !=  Vector2.ZERO:
 		get_viewport().warp_mouse(get_global_mouse_position() +vect_tmp)
+
+func _unhandled_input(event : InputEvent):
+	if event.is_action_pressed("SKIP"):
+		nextLevel()
