@@ -100,13 +100,9 @@ texture = ExtResource( 7 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 239, 409 )
+position = Vector2( 257, 455 )
+rotation = 1.48353
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
-
-[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 712, 272 )
-scale = Vector2( -0.15, 0.1 )
 texture = ExtResource( 5 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
