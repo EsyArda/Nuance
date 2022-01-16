@@ -1,52 +1,78 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/World/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Level/LevelTemplate.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/World/Elevator.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/World/Crossable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Environement/mountains.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Environement/near_mountains.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Environement/sky.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Environement/tree.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Environement/tree2.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/World/Red_flower.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 17, 44.5 )
 
-[node name="Level1" type="Node2D"]
+[node name="Level0" type="Node2D"]
 script = ExtResource( 2 )
+reset_when_died = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.01, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/sky"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 7 )
+
+[node name="far mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.05, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/far mountains"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 5 )
+
+[node name="near mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/near mountains"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 6 )
+
+[node name="elements" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/elements"]
+position = Vector2( 800, 390 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/elements"]
+position = Vector2( 370, 390 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 9 )
+
+[node name="Flower" parent="." instance=ExtResource( 10 )]
+position = Vector2( 670, 490 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="Flower2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 695, 500 )
+rotation = -3.14159
+scale = Vector2( 0.05, -0.05 )
 
 [node name="Ground" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 568 )
-
-[node name="Ground2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 96, 568 )
-
-[node name="Ground3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 568 )
-
-[node name="Ground4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 568 )
+position = Vector2( 512, 568 )
+scale = Vector2( 20, 1 )
+_scale = Vector2( 20, 1 )
 
 [node name="SpawnPoint" type="Node2D" parent="."]
-position = Vector2( 32, 488 )
-
-[node name="NodeElevator" parent="." instance=ExtResource( 3 )]
-position = Vector2( 365, 456 )
-couleur_elevator = 2
-
-[node name="Crossable" parent="." instance=ExtResource( 4 )]
-position = Vector2( 703, 541 )
-scale = Vector2( 2, 0.16 )
-_scale = Vector2( 2, 0.16 )
-is_disabled = true
-
-[node name="Ground5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 800, 568 )
-
-[node name="Ground6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 864, 568 )
-
-[node name="Ground7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 928, 568 )
-
-[node name="Ground8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 992, 568 )
+position = Vector2( 40.4747, 468.936 )
 
 [node name="AreaEnd" type="Area2D" parent="."]
 position = Vector2( 1000, 496 )
@@ -55,4 +81,21 @@ position = Vector2( 1000, 496 )
 position = Vector2( 8, -3.5 )
 shape = SubResource( 1 )
 
+[node name="NodeElevator" parent="." instance=ExtResource( 3 )]
+position = Vector2( 250, 504 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 1, 1 )
+
+[node name="NodeElevator2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 450, 472 )
+scale = Vector2( 1, 2 )
+move_to = Vector2( 0, 0 )
+_scale = Vector2( 1, 2 )
+
+[node name="Crossable" parent="." instance=ExtResource( 4 )]
+position = Vector2( 900, 408 )
+rotation = 1.5708
+scale = Vector2( 4, 0.1 )
+_scale = Vector2( 4, 0.1 )
+is_disabled = true
 [connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]
