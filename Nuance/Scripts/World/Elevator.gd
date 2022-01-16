@@ -15,17 +15,20 @@ export var _scale = Vector2(2.5, 0.5) #taille de notre ascenceur
 export var couleur_elevator=1 #couleur de la plateforme (1=noir,2=rouge,3=bleu)
 
 var follow=Vector2.ZERO
-
+var color : Color = Color.white
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_scale(_scale)
 	if (couleur_elevator==1) :
 		$KinematicElevator/Color.color= Color(0, 0, 0, 1) #black
+		color = Color.black
 	elif (couleur_elevator==2) :
 		$KinematicElevator/Color.color= Color(1, 0, 0, 1) #red
+		color = Color(1, 0, 0, 1)
 	elif (couleur_elevator==3) :
 		$KinematicElevator/Color.color= Color(0, 0, 1, 1) #blue
+		color = Color(0, 0, 1, 1)
 	
 	_init_tween()
 
