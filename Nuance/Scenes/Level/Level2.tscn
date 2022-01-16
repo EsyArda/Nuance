@@ -49,9 +49,9 @@ position = Vector2( 365, 456 )
 couleur_elevator = 2
 
 [node name="Crossable" parent="." instance=ExtResource( 2 )]
-position = Vector2( 703, 541 )
-scale = Vector2( 2, 0.16 )
-_scale = Vector2( 2, 0.16 )
+position = Vector2( 688, 541 )
+scale = Vector2( 2.5, 0.16 )
+_scale = Vector2( 2.5, 0.16 )
 is_disabled = true
 
 [node name="Ground5" parent="." instance=ExtResource( 4 )]
@@ -77,4 +77,5 @@ shape = SubResource( 1 )
 position = Vector2( 0.05, 0 )
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 5 )
+
 [connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]

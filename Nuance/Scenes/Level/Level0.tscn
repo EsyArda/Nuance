@@ -26,7 +26,7 @@ position = Vector2( 67.8265, 416.611 )
 position = Vector2( -1000, 300 )
 scale = Vector2( 20, 12 )
 move_to = Vector2( 3000, 0 )
-speed = 13
+speed = 11
 _scale = Vector2( 20, 12 )
 
 [node name="AreaEnd" type="Area2D" parent="."]
@@ -59,4 +59,5 @@ texture = ExtResource( 8 )
 position = Vector2( 1010, 400 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
+
 [connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]
