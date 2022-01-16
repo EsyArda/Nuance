@@ -26,14 +26,14 @@ position = Vector2( 31, 535 )
 
 [node name="NodeElevator" parent="." instance=ExtResource( 3 )]
 position = Vector2( 416, 456 )
-scale = Vector2( 1, 0.45 )
+scale = Vector2( 1, 0.4 )
 move_to = Vector2( 0, 0 )
-_scale = Vector2( 1, 0.45 )
+_scale = Vector2( 1, 0.4 )
 
 [node name="Crossable" parent="." instance=ExtResource( 4 )]
-position = Vector2( 320, 446 )
-scale = Vector2( 2, 0.1 )
-_scale = Vector2( 2, 0.1 )
+position = Vector2( 288, 446 )
+scale = Vector2( 3, 0.1 )
+_scale = Vector2( 3, 0.1 )
 is_disabled = true
 
 [node name="Ground8" parent="." instance=ExtResource( 1 )]
@@ -72,6 +72,12 @@ scale = Vector2( 0.5, 1 )
 move_to = Vector2( 0, 0 )
 _scale = Vector2( 0.5, 1 )
 couleur_elevator = 2
+
+[node name="Crossable3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 96, 446 )
+scale = Vector2( 3, 0.1 )
+_scale = Vector2( 3, 0.1 )
+is_disabled = true
 
 [node name="AreaEnd" type="Area2D" parent="."]
 position = Vector2( 1000, 496 )
