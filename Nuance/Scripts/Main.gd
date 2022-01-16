@@ -5,6 +5,8 @@ var levels : Array = [preload("res://Scenes/Level/Level0.tscn"), preload("res://
 var current_level_index : int = -1
 var node_level = null
 
+export (int) var cursor_speed : int  = 6
+
 func nextLevel():
 	$StateMachine.current_state.next()
 
@@ -22,3 +24,16 @@ func set_spawn_point(pos):
 
 func reload_lvl():
 	$StateMachine.current_state.load_level()
+
+func _physics_process(_delta):
+	var vect_tmp : Vector2 = Vector2.ZERO
+	if Input.is_action_pressed("Cursor_down"):
+		vect_tmp.y = cursor_speed
+	if Input.is_action_pressed("Cursor_up"):
+		vect_tmp.y = -cursor_speed
+	if Input.is_action_pressed("Cursor_left"):
+		vect_tmp.x = -cursor_speed
+	if Input.is_action_pressed("Cursor_right"):
+		vect_tmp.x = cursor_speed
+	if vect_tmp !=  Vector2.ZERO:
+		get_viewport().warp_mouse(get_global_mouse_position() +vect_tmp)
