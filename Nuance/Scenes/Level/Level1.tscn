@@ -98,4 +98,5 @@ rotation = 1.5708
 scale = Vector2( 4, 0.1 )
 _scale = Vector2( 4, 0.1 )
 is_disabled = true
+
 [connection signal="body_entered" from="AreaEnd" to="." method="_on_AreaEnd_body_entered"]
